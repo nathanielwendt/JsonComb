@@ -1,18 +1,7 @@
 from copy import deepcopy
 import itertools
 
-# def expand(cand_dict):
-#     with open(source_file) as data_file:
-#         source = json.load(data_file)
-#
-#     source_exp = find_tokens(source)
-#
-#     import pprint
-#     print "--C--C--C--C- JSON COMBO -C--C--C--C--"
-#     pprint.pprint(source_exp)
-#     print "--C--C--C--C--C--C--C--C--C--C--C--C--"
-#     with open(output_file, 'w') as outfile:
-#         json.dump(source, outfile)
+EXPAND_INDICATOR = "!C"
 
 def build_combinations(combos, res_template, res_list):
     combinations = cartesian_product(combos)
@@ -71,4 +60,4 @@ def find_tokens(source):
     return res
 
 def check_exp(cand):
-    return isinstance(cand, list) and len(cand) > 0 and cand[0] == "!"
+    return isinstance(cand, list) and len(cand) > 0 and cand[0] == EXPAND_INDICATOR

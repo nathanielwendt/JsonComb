@@ -7,7 +7,7 @@ class TestFindTokens(unittest.TestCase):
         source = [
             {
                 "file": "new_abboip.txt",
-                "smartIns": ["!","true","false"],
+                "smartIns": ["!C","true","false"],
                 "smartInsVal": 1
             }
         ]
@@ -32,7 +32,7 @@ class TestFindTokens(unittest.TestCase):
         source = [
             "a",
             "b",
-            ["!","a","b","c"]
+            ["!C","a","b","c"]
         ]
 
         expected = [
@@ -50,10 +50,10 @@ class TestFindTokens(unittest.TestCase):
             "dbName": "StdInsert",
             "numPoints": "20000",
             "file": "new_abboip.txt",
-            "smartIns": ["!","true","false"],
+            "smartIns": ["!C","true","false"],
             "smartInsVal": "1.0",
             "kdTree": "true",
-            "type": ["!","StdTable","SQLiteRTree"],
+            "type": ["!C","StdTable","SQLiteRTree"],
             "dataType": "cabs",
         }
 
@@ -105,13 +105,13 @@ class TestFindTokens(unittest.TestCase):
     def test_nested(self):
         source = {
             "first": [
-                "!",
+                "!C",
                 "a",
                 "b",
                 {
                     "1": "one",
                     "2": "two",
-                    "3": ["!", "three", "threeve","peeve"]
+                    "3": ["!C", "three", "threeve","peeve"]
                 }
             ],
             "second": 2

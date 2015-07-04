@@ -1,7 +1,7 @@
 import pprint
 from comb import find_tokens
 
-def expand(cand_dict, show_result):
+def expand(source, show_result):
     source_exp = find_tokens(source)
     if show_result:
         print "--C--C--C--C- JSON COMBO -C--C--C--C--"
