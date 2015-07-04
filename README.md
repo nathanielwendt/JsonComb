@@ -7,8 +7,8 @@ Inspired by having to manually create config files in JSON that enumerated all p
 
 {
    "name": "basic",
-   "count": ["!",1,2,3],
-   "type": ["!","mobility","cabs"]
+   "count": ["!C",1,2,3],
+   "type": ["!C","mobility","cabs"]
 }
 
 ```
