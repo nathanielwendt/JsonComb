@@ -70,3 +70,39 @@ or
 
 to display (in the terminal) the result
 
+
+###A Note on Ordering
+
+You probably noticed that JsonComb takes a regular obj and turns it into a list of items (each combination being a list item).  Ordering is enforced alphabetically.  So if you have 2 keys that you want their values expanded such as:
+
+```json
+
+{
+   "alpha": [1,2]
+   "charlie": ["a","b"]
+   "zeta": ["one","two"]
+   
+}
+
+````
+
+The first item is alpha in the ordering so the combinations will be as follows:
+
+alpha | charlie | zeta
+  1        a       one
+  1        a       two
+  1        b       one
+  1        b       two
+  2        a       one
+  2        a       two
+  2        b       one
+  2        b       two
+  
+Note that the first alphabetic key is fixed for as long as the other values vary.
+
+
+
+###Roadmap
+
+- Allow for customizable ordering (not just alphabetical as current default)
+- More robust test suite
