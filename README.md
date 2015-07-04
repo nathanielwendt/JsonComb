@@ -1,7 +1,7 @@
 # JsonComb
-Decorate JSON files according to JsonComb spec in order to automatically generate combinations of entries while still representing it in a short form.
+Inspired by having to manually create config files in JSON that enumerated all possible values that I wanted, I decided to create a way to denote many item combinations in a compact form.  The idea is simple:
 
-Inspired by having to manually create config files in JSON that enumerated all possible values that I wanted tested, I decided to create a way to denote combination expansion in JSON.  The idea is simple:
+Write this:
 
 ```json
 
@@ -12,7 +12,6 @@ Inspired by having to manually create config files in JSON that enumerated all p
 }
 
 ```
-
 
 And JsonComb will turn it into this:
 
