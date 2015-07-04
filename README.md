@@ -8,36 +8,65 @@ Inspired by having to manually create config files in JSON that enumerated all p
 {
    "name": "basic",
    "count": ["!",1,2,3],
-   "type": ["!","mobility,"cabs"]
+   "type": ["!","mobility","cabs"]
 }
 
 ```
 
+
+And JsonComb will turn it into this:
+
 ```json
+
+[{
+   "name": "basic",
+   "count": 1,
+   "type": "mobility"
+},
+{
+   "name": "basic",
+   "count": 1,
+   "type": "cabs"
+},
+{
+   "name": "basic",
+   "count": 2,
+   "type": "mobility"
+},
+{
+   "name": "basic",
+   "count": 2,
+   "type": "cabs"
+}]
 
 ```
 
-And JsonComb will turn it into this:
-<code>
-{
-   "name": "basic",
-   "count": 1,
-   "type": "mobility"
-},
-{
-   "name": "basic",
-   "count": 1,
-   "type": "cabs"
-},
-{
-   "name": "basic",
-   "count": 2,
-   "type": "mobility"
-},
-{
-   "name": "basic",
-   "count": 2,
-   "type": "cabs"
-},
+Check out the tests for more examples, like nesting!
 
+
+###Usage
+
+#####Source Directly:
+
+```python
+from comb import find_tokens
+result_obj = find_tokens(source_obj)
+```
+
+#####Utility (JSON file processing) Source:
+
+```python
+from utility import expand
+expand(source_file, True)
+```
+
+#####Utility (JSON file processing) Command Line:
+
+```python utility.py source.json output.json```
+
+or
+
+```python utility.py source.json output.json showres```
+
+to display (in the terminal) the result
 
