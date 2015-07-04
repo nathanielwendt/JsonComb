@@ -86,6 +86,7 @@ You probably noticed that JsonComb takes a regular obj and turns it into a list 
 
 The first item is alpha in the ordering so the combinations will be as follows:
 
+```
 alpha | charlie | zeta
   1        a       one
   1        a       two
@@ -95,6 +96,7 @@ alpha | charlie | zeta
   2        a       two
   2        b       one
   2        b       two
+```
   
 Note that the first alphabetic key is fixed for as long as the other values vary.
 
