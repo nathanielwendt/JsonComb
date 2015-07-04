@@ -73,15 +73,14 @@ to display (in the terminal) the result
 
 ###A Note on Ordering
 
-You probably noticed that JsonComb takes a regular obj and turns it into a list of items (each combination being a list item).  Ordering is enforced alphabetically.  So if you have 2 keys that you want their values expanded such as:
+You probably noticed that JsonComb takes a regular obj and turns it into a list of items (each combination being a list item).  Ordering might be important in an application and in JsonComb it is enforced alphabetically.  So if you have 3 keys for value expansion:
 
 ```json
 
 {
-   "alpha": [1,2]
-   "charlie": ["a","b"]
-   "zeta": ["one","two"]
-   
+   "alpha": ["!C",1,2]
+   "charlie": ["!C","a","b"]
+   "zeta": ["!C","one","two"]
 }
 
 ````
@@ -99,8 +98,6 @@ alpha | charlie | zeta
   2        b       two
   
 Note that the first alphabetic key is fixed for as long as the other values vary.
-
-
 
 ###Roadmap
 
