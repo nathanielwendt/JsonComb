@@ -3,14 +3,19 @@ Decorate JSON files according to JsonComb spec in order to automatically generat
 
 Inspired by having to manually create config files in JSON that enumerated all possible values that I wanted tested, I decided to create a way to denote combination expansion in JSON.  The idea is simple:
 
-Use this:
-<code>
+```json
+
 {
    "name": "basic",
    "count": ["!",1,2,3],
    "type": ["!","mobility,"cabs"]
-},
-</code>
+}
+
+```
+
+```json
+
+```
 
 And JsonComb will turn it into this:
 <code>
@@ -34,6 +39,5 @@ And JsonComb will turn it into this:
    "count": 2,
    "type": "cabs"
 },
-</code>
 
 
