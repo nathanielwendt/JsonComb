@@ -77,8 +77,8 @@ You probably noticed that JsonComb takes a regular obj and turns it into a list 
 ```json
 
 {
-   "alpha": ["!C",1,2]
-   "charlie": ["!C","a","b"]
+   "alpha": ["!C",1,2],
+   "charlie": ["!C","a","b"],
    "zeta": ["!C","one","two"]
 }
 
