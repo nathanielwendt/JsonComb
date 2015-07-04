@@ -1,0 +1,13 @@
+{
+    "first": [
+        "!",
+        "a",
+        "b",
+        {
+            "1": "one",
+            "2": "two",
+            "3": ["!", "three", "threeve","peeve"]
+        }
+    ],
+    "second": 2
+}

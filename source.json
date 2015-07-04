@@ -1,0 +1,13 @@
+[
+{
+    "eval": "StdInsert",
+    "dbName": "StdInsert",
+    "numPoints": "20000",
+    "file": "new_abboip.txt",
+    "smartIns": ["!","true","false"],
+    "smartInsVal": "1.0",
+    "kdTree": "true",
+    "type": ["!","StdTable","SQLiteRTree"],
+    "dataType": "cabs"
+}
+]
