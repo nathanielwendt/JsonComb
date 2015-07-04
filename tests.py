@@ -2,7 +2,7 @@ from comb import find_tokens
 import unittest
 
 
-class MyTest(unittest.TestCase):
+class TestFindTokens(unittest.TestCase):
     def test_simple(self):
         source = [
             {
@@ -98,6 +98,53 @@ class MyTest(unittest.TestCase):
             "type": "SQLiteRTree",
             "dataType": "cabs"
         }]
+
+        res = find_tokens(source)
+        self.assertListEqual(res, expected)
+
+    def test_nested(self):
+        source = {
+            "first": [
+                "!",
+                "a",
+                "b",
+                {
+                    "1": "one",
+                    "2": "two",
+                    "3": ["!", "three", "threeve","peeve"]
+                }
+            ],
+            "second": 2
+        }
+
+        expected = [
+            {
+                "first": "a",
+                "second": 2
+            },
+            {
+                "first": "b",
+                "second": 2
+            },
+            {
+                "first": [{
+                    "1": "one",
+                    "2": "two",
+                    "3": "three"
+                },
+                {
+                    "1": "one",
+                    "2": "two",
+                    "3": "threeve"
+                },
+                {
+                    "1": "one",
+                    "2": "two",
+                    "3": "peeve"
+                }],
+                "second": 2
+            },
+        ]
 
         res = find_tokens(source)
         self.assertListEqual(res, expected)
