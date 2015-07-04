@@ -7,7 +7,7 @@ Write this:
 
 {
    "name": "basic",
-   "count": ["!C",1,2,3],
+   "count": ["!C",1,2],
    "type": ["!C","mobility","cabs"]
 }
 
