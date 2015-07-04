@@ -24,8 +24,15 @@ def build_combinations(combos, res_template, res_list):
         res_list.append(next_res)
 
 def cartesian_product(my_dict):
-    product = [x for x in apply(itertools.product, my_dict.values())]
-    return [dict(zip(my_dict.keys(), p)) for p in product]
+    sorted_vals = get_sorted_values(my_dict)
+    product = [x for x in apply(itertools.product, sorted_vals)]
+    return [dict(zip(sorted(my_dict.keys()), p)) for p in product]
+
+def get_sorted_values(my_dict):
+    res = []
+    for key,value in sorted(my_dict.iteritems()):
+        res.append(value)
+    return res
 
 def find_tokens(source):
     res = []
